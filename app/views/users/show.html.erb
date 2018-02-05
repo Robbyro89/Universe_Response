@@ -1,2 +1,13 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">Bienvenue !</h1>
+
+<h2> Ton email : </h2>
+<%= @user.email %>
+
+<br>
+
+ <% if logged_in? && @user == @current_user %>
+  <h3> Edite ton profil pour changer ton adresse email ou ton mot de passe !</h3>
+ <% end %>
+
+	 <%= link_to 'Editer mon profil', edit_user_path(@user), :class => "w3-btn w3-ripple w3-teal" %>
+<% end %>

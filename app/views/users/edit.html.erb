@@ -1,2 +1,24 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h1 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">Editer mon profil</h1>
+<p>Tu peux changer ton email, ton mot-de-passe et rajouter une petite bio</p>
+
+<p> utlisateur n°<%= @user.id %>  -  <%= @user.email %> </p>
+
+<%= render 'form'%>
+   <%= form_for(@user) do |f| %>
+
+      <%= f.label :email, :class => "w3-text-teal" %>
+      <%= f.email_field :email %>
+
+      <%= f.label :bio, :class => "w3-text-teal" %>
+      <%= f.text_field :bio %>
+
+      <%= f.label :password, :class => "w3-text-teal" %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation", :class => "w3-text-teal" %>
+      <%= f.password_field :password_confirmation %>
+
+
+
+      <%= f.submit "Update my account", :class => "w3-btn w3-ripple w3-teal  w3-margin-top" %>
+    <% end %>

@@ -1,2 +1,17 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">Inscris-toi !</h1>
+
+<%=render 'form'%>
+
+ <%= form_for(@user) do |f| %>
+
+      <%= f.label :email, :class => "w3-text-teal"%>
+      <%= f.email_field :email %>
+
+      <%= f.label :password, :class => "w3-text-teal"  %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation", :class => "w3-text-teal"  %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Créer mon compte", :class => "w3-btn w3-ripple w3-teal w3-margin-top"%>
+    <% end %>

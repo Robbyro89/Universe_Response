@@ -1,0 +1,19 @@
+<div id = "home">
+  <h1 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">La réponse à la question secrète de l'univers</h1>
+
+	<p>Tu veux connaître LA réponse à LA question sur le secret de l'univers ?</p>
+
+	<img src = "Universe.gif" class = w3-section alt = "psyche" >
+
+	<% if logged_in? %>
+	   	<%= button_to 'Clique ici !', secret_path, :class => "w3-btn w3-ripple w3-teal", :method => :get %>
+	<%else %>
+		<div class = "connect">
+			<h3 class = w3-section> Créer un compte :<h3>
+			<%= button_to 'Inscris-toi !', signup_path, :class => "w3-btn w3-ripple w3-teal", :method => :get %>
+
+			<h3 class = w3-section> Déjà inscrit ? </h3>
+			<%= button_to 'Connecte-toi !', login_path, :class => "w3-btn w3-ripple w3-teal", :method => :get %>
+		</div>
+	<% end %>
+</div>

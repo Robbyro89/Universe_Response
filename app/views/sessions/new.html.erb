@@ -1,0 +1,14 @@
+<h1 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">Se connecter</h1>
+
+  <%= form_for(:session, url: login_path) do |f| %>
+
+      <%= f.label :email, :class => "w3-text-teal"  %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password, :class => "w3-text-teal"  %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.submit "Log in", :class => "w3-btn w3-ripple w3-teal w3-margin-top" %>
+     <% end %>
+
+   <p>Pas encore inscrit ? <%= link_to "Créer un compte", signup_path, :class => "w3-btn w3-ripple w3-blue" %></p>
