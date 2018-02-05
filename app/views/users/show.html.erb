@@ -1,13 +1,11 @@
-<h1 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">Bienvenue !</h1>
-
-<h2> Ton email : </h2>
-<%= @user.email %>
-
 <br>
-
+<h1 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">Bienvenue Membre du Secret</h1>
+<br>
+<h4>Ton identifiant : </h4>
+<%= @user.email %>
+<br><br>
  <% if logged_in? && @user == @current_user %>
-  <h3> Edite ton profil pour changer ton adresse email ou ton mot de passe !</h3>
+  <h4> Edite ton profil pour modifier des identifiants et rendre ton profil encore plus secret :</h4>
  <% end %>
 
-	 <%= link_to 'Editer mon profil', edit_user_path(@user), :class => "w3-btn w3-ripple w3-teal" %>
-<% end %>
+<%= link_to 'Editer mon profil', edit_user_path(@user), :class => "btn btn-lg btn-primary btn-sm" %>

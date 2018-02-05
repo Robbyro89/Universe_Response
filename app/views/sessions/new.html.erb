@@ -1,14 +1,23 @@
-<h1 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">Se connecter</h1>
-
+<br>
+<h2 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">Se connecter</h2>
+<br>
   <%= form_for(:session, url: login_path) do |f| %>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">Nous ne communiquerons jamais votre adresse email</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Confirmation</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-lg btn-success">Valider</button>
+  </form>
+<% end %>
 
-      <%= f.label :email, :class => "w3-text-teal"  %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password, :class => "w3-text-teal"  %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.submit "Log in", :class => "w3-btn w3-ripple w3-teal w3-margin-top" %>
-     <% end %>
-
-   <p>Pas encore inscrit ? <%= link_to "Créer un compte", signup_path, :class => "w3-btn w3-ripple w3-blue" %></p>
+<p>Pas encore inscrit ? <%= link_to "Créer un compte", signup_path, :class => "w3-btn w3-ripple w3-blue" %></p>
