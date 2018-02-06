@@ -14,6 +14,11 @@
       <p>Confirmation :</p>
       <%= f.password_field :password, class: 'form-control' %>
 <br>
+      <%= f.label :remember_me, class: "checkbox inline" do %>
+        <%= f.check_box :remember_me %>
+        <span>Se souvenir de moi</span>
+      <% end %>
+<br>
       <%= f.submit "Valider", class: "btn btn-success" %>
     <% end %>
 <br>
