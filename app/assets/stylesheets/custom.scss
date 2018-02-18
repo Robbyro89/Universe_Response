@@ -1,7 +1,11 @@
 /* forms */
-.
-.
-.
+
+body {
+  background-image: image-url('Universe.gif');
+  background-repeat: no-repeat;
+  background-size: 1300px 625px;
+}
+
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
@@ -11,7 +15,122 @@
   }
 }
 
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
+h2, h3, h4, p{
+  color: #00FFFF;
+}
+
+.navbar-brand {
+  color: #00FFFF!important;
+  text-shadow: -2px 2px #666666!important;
+  font-size: 22px!important;
+}
+
+.navbar-text {
+  color: #00FFFF!important;
+  text-shadow: -2px 2px #666666;
+  font-size: 22px!important!important;
+}
+
+.row {
+}
+
+#navhead {
+  background: none!important;
+  font-size: 25px;
+}
+
+#nav-bot {
+  background: none!important;
+}
+
+#gyphlog {
+  color: #00FFFF!important;
+  text-shadow: -2px 2px #666666!important;
+  font-size: 16px!important;
+  &:hover {
+    color: yellow!important;
+  }
+}
+
+#glyphfoot {
+  color: #00FFFF!important;
+  text-shadow: -2px 2px #666666!important;
+  font-size: 15px!important;
+  &:hover {
+    background: none!important;
+    color: yellow!important;
+  }
+}
+#glyphhome, #glyphindex, #glyphprofil, #glyphlogout {
+  color: #00FFFF;
+  &:hover {
+    color: yellow!important;
+  }
+}
+
+#jumbologout {
+  margin-top: 330px;
+  margin-left: -100px;
+  float: left;
+  background: none;
+  color: #00FFFF!important;
+}
+
+#jumbosession {
+  background: none!important;
+  float: left;
+  margin-left: -50px;
+}
+
+#jumbologin {
+  background: none!important;
+  float: left;
+  margin-top: 300px;
+  margin-left: -100px;
+}
+
+#jumbomembres {
+  background: none!important;
+  float: left;
+  margin-top: 50px;
+  margin-left: -100px;
+}
+
+#jumboshow {
+  background: none!important;
+  float: left;
+  margin-top: 90px;
+  margin-left: -100px;
+}
+
+#jumbosecret {
+  background: none!important;
+  float: left;
+  margin-top: 100px;
+  margin-left: -100px;
+}
+
+#connexion, #profil, #logout, #secret {
+  margin-right: 10px;
+  margin-top: 3px;
+  background: none!important;
+  color: #00FFFF!important;
+  border-color: #00FFFF!important;
+  &:hover {
+    background: none!important;
+    color: yellow!important;
+    border-color: yellow!important;
+  }
+}
+
+#create {
+  font-size: 12px;
+  background: none!important;
+  color: #00FFFF;
+  border-color: #00FFFF!important;
+  &:hover {
+    background: none!important;
+    color: yellow!important;
+    border-color: yellow!important;
+  }
 }

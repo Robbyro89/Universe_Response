@@ -1,9 +1,7 @@
-
+<div class="jumbotron" id="jumbomembres">
+  <h2>Liste des Membres du Secret</h2>
 <br>
-<h1 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">Liste des Membre du Secret</h1>
-<br>
-<h4>Bienvenue</h4>
-<% @users.each do |user| %>
-<%= user.email %> <br>
-
-<% end %>
+  <% @users.each do |user| %>
+    <i style="color: #00FFFF"><%= user.email %></i> <br>
+  <% end %>
+</div>

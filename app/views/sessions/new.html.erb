@@ -1,28 +1,22 @@
 <br>
-<h2 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">Se connecter</h2>
+<div class="jumbotron" id="jumbosession">
+  <h2><b>Se connecter</b></h2>
 <br>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="row">
+    <div class="col-md-9 col-md-offset-3">
     <%= form_for(:session, url: login_path) do |f| %>
 
-      <p>Email :</p>
+      <p><b>Email :</b></p>
       <%= f.email_field :email, class: 'form-control' %>
 <br>
-      <p>Mot de passe :</p>
+      <p><b>Mot de passe :</b></p>
       <%= f.password_field :password, class: 'form-control' %>
 <br>
-      <p>Confirmation :</p>
-      <%= f.password_field :password, class: 'form-control' %>
-<br>
-      <%= f.label :remember_me, class: "checkbox inline" do %>
-        <%= f.check_box :remember_me %>
-        <span>Se souvenir de moi</span>
-      <% end %>
-<br>
-      <%= f.submit "Valider", class: "btn btn-success" %>
+      <%= f.submit "Se Connecter", class: "btn btn-outline-md", id: "connexion" %>
     <% end %>
 <br>
+    </div>
   </div>
-</div>
 
-<p>Pas encore inscrit ? <%= link_to "Créer un compte", new_user_path, :class => "w3-btn w3-ripple w3-blue" %></p>
+  <p>Pas encore inscrit ? <%= link_to "Créer un compte", new_user_path, :class => "btn btn-outline-sm", id: "create" %></p>
+</div>

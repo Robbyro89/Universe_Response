@@ -1,11 +1,12 @@
+<div class="jumbotron" id="jumboshow">
+  <h2>Bienvenue Membre du Secret</h2>
 <br>
-<h1 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">Bienvenue Membre du Secret</h1>
-<br>
-<h4>Ton identifiant : </h4>
-<%= @user.email %>
-<br><br>
- <% if logged_in? && @user == @current_user %>
-  <h4> Edite ton profil pour modifier des identifiants et rendre ton profil encore plus secret :</h4>
- <% end %>
+  <h3>Ton identifiant : </h3>
+  <i style="color: #00FFFF" "font-size:10px"><%= @user.email %></i>
+  <br><br>
+   <% if logged_in? && @user == @current_user %>
+    <h4> Edite ton profil pour modifier des identifiants et rendre ton profil encore plus secret :</h4>
+   <% end %>
 
-<%= link_to 'Editer mon profil', edit_user_path(@user), :class => "btn btn-lg btn-primary btn-sm" %>
+  <%= link_to 'Editer mon profil', edit_user_path(@user), :class => "btn btn-lg btn-outline-sm", id: "create" %>
+</div>

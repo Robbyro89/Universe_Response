@@ -1,17 +1,38 @@
-<nav class="navbar navbar-dark bg-dark navbar-fixed-top navbar-inverse" >
-	<div class = "nav btn-group navbar-expand-md navbar-nav navbar-left">
-		<%=link_to 'Home', root_path, :class => "btn btn-lg btn-primary btn-sm" %>
-		<%=link_to 'Liste des Membres du Secret', index_path, :class => "btn btn-lg btn-primary btn-sm" %>
-	</div>
-
-	<div class = "nav btn-group navbar-expand-md navbar-nav navbar-right">
-		<%=link_to "About", about_path, :class => "btn btn-lg btn-primary btn-sm"  %>
-
-		<% if logged_in? %>
-			<%= link_to "Mon profil", current_user, :class => "btn btn-lg btn-primary btn-sm"  %>
-			<%=link_to 'Log out', logout_path, method: :delete, :class => "btn btn-lg btn-primary btn-sm"  %>
-		<% else %>
-		  <%=link_to 'Log in', login_path, :class => "btn btn-lg btn-success btn-sm"  %>
-		<% end %>
-	 </div>
-</nav>
+<% if logged_in? %>
+	<nav class="navbar-expand-md navbar-fixed-top navbar-inverse" id="navhead">
+		<div class="container-fluid">
+			<div class="navbar-header">
+		    <a class="navbar-brand" href="/" id="glyphhome">
+		      <span class="glyphicon glyphicon-home"></span>
+		    </a>
+				<a class="navbar-brand" href="/index" id="glyphindex">
+        	<b>Liste des Membres du Secret</b>
+      		<span class="glyphicon glyphicon-fire"></span>
+      	</a>
+	   	</div>
+			<div class="nav btn-group navbar-expand-md navbar-nav navbar-right" id="glyphprofil">
+				<%= link_to current_user, class: "btn btn-lg btn-outline btn-md", id:"glyphprofil" do %>
+					<i class="glyphicon glyphicon-user"></i> Profil
+				<% end %>
+				<%= link_to logout_path, methode: :delete, class: "btn btn-lg btn-outline btn-md", id:"glyphlogout" do %>
+					<i class="glyphicon glyphicon-log-out"></i> Log Out
+				<% end %>
+			</div>
+		</div>
+	</nav>
+<% else %>
+	<nav class="navbar-expand-md navbar-fixed-top navbar-inverse" id="navhead">
+		<div class="navbar-expand-md navbar-nav navbar-left">
+		  <p class="navbar-text">Quelle est La Réponse à la Question sur le Secret de l'Univers</p>
+		</div>
+		<div class="navbar-brand navbar-right">
+			<ul>
+				<a class="btn btn-outline-md" href="login" id="gyphlog">
+					<span class="glyphicon glyphicon-log-in"></span>
+					 <b> Log In </b>
+					<span class="glyphicon glyphicon-off"></span>
+				</a>
+			</ul>
+		</div>
+	</nav>
+<% end %>

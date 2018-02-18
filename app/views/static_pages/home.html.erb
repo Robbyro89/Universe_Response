@@ -1,14 +1,15 @@
-<div id = "home">
-  <h1 class="w3-text-orange" class="w3-jumbo" class = w3-section style="text-shadow:1px 1px 0 #444">La réponse à la question secrète de l'univers</h1>
+<% if logged_in? %>
 
-	<p>Tu veux connaître la réponse à la question sur le secret de l'univers ?<br>
-  Alors clic sur le lien <i>ci-dessous</i> et prepare toi...</p>
+  <div class="jumbotron" id="jumbologin">
+    <h4 style="font-size: 25px">Tu veux toujours connaitre La Réponse<br> à la Question sur le Secret de l'Univers ?</h4>
+    <p>Alors clic sur le lien <i>ci-dessous</i> et prepare toi...</p>
 
-  <%=image_tag("Universe.gif",alt: "Responsive image", alt: "Universe")%>
-<br><br>
-	<% if logged_in? %>
-	   	<%= button_to 'Clique ici', secret_path, :class => "btn btn-lg btn-primary btn-sm", :method => :get %>
-	<%else %>
-    <%= render 'layouts/footer' %>
-	<% end %>
-</div>
+  <%= link_to 'Révèle moi le Secret', secret_path, :class => "btn btn-lg btn-primary btn-md", id: "secret", :method => :get %>
+  </div>
+<%else %>
+  <div class="jumbotron" id="jumbologout">
+    Si toi aussi tu veux connaitre LA réponse à la Question sur le Secret de l'Univers,<br>
+    connecte toi en cliquant sur le bouton <b style="color: yellow"><u><i>Log In</i></u></b>
+  </div>
+
+<% end %>
